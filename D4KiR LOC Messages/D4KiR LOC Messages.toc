@@ -1,0 +1,29 @@
+## Interface: 90002
+## Version: 1.8 Release
+## Title: D4KiR |cffffffff• |cff9966ffLOC Messages
+## Notes: Send to chat LOC messages
+## Author: D4KiR
+## DefaultState: enabled
+## SavedVariables: LOCTAB
+## SavedVariablesPerCharacter: LOCTABPC
+
+isretail.lua
+
+libs/LIB_output.lua
+libs/LIB_math.lua
+libs/LIB_design.lua
+libs/LIB_lang.lua
+locale/enUS.lua
+locale/deDE.lua
+locale/esES.lua
+locale/frFR.lua
+locale/koKR.lua
+locale/ruRU.lua
+locale/zhCN.lua
+locale/zhTW.lua
+
+config.lua
+
+settings.lua
+
+core.lua
