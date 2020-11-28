@@ -90,26 +90,26 @@ function LOCCreateComboBox(tab)
 	tab.x = tab.x or 0
 	tab.y = tab.y or 0
 
-	local CB = CreateFrame("Frame", tab.name, tab.parent, "UIDropDownMenuTemplate")
+	local CB = L_Create_UIDropDownMenu("Frame", tab.parent)
 	CB:SetPoint("TOPLEFT", tab.x, tab.y)
 
-	UIDropDownMenu_SetWidth(CB, 120)
-	UIDropDownMenu_SetText(CB, tab.value)
+	L_UIDropDownMenu_SetWidth(CB, 120)
+	L_UIDropDownMenu_SetText(CB, tab.value)
 
 	-- Create and bind the initialization function to the dropdown menu
-	UIDropDownMenu_Initialize(CB, function(self, level, menuList)
+	L_UIDropDownMenu_Initialize(CB, function(self, level, menuList)
 		for i, v in pairs(tab.tab) do
-			local info = UIDropDownMenu_CreateInfo()
+			local info = L_UIDropDownMenu_CreateInfo()
 			info.func = self.SetValue
 			info.text, info.arg1, info.checked = v, v, v == tab.value
-			UIDropDownMenu_AddButton(info)
+			L_UIDropDownMenu_AddButton(info)
 		end
 	end)
 
 	function CB:SetValue(newValue)
 		LOCTABPC[tab.dbvalue] = newValue
-		UIDropDownMenu_SetText(CB, newValue)
-		CloseDropDownMenus()
+		L_UIDropDownMenu_SetText(CB, newValue)
+		L_CloseDropDownMenus()
 	end
 
 	return CB
