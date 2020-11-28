@@ -9,6 +9,10 @@
 
 isretail.lua
 
+# External Libs
+libs\LibStub\LibStub.lua
+libs\LibUIDropDownMenu\LibUIDropDownMenu.xml
+
 libs/LIB_output.lua
 libs/LIB_math.lua
 libs/LIB_design.lua
