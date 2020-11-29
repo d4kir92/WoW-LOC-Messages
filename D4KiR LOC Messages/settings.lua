@@ -87,13 +87,14 @@ function LOCInitSetting()
 	settings_channel.x = 0
 	settings_channel.y = Y
 	settings_channel.dbvalue = "channelchat"
-	settings_channel.tab = {}
-	settings_channel.tab[0] = "AUTO"
-	settings_channel.tab[1] = "PARTY"
-	settings_channel.tab[2] = "RAID"
-	settings_channel.tab[3] = "SAY"
-	settings_channel.tab[4] = "YELL"
-	settings_channel.tab[5] = "INSTANCE_CHAT"
+	settings_channel.tab = {
+		{ Name = "Auto", Code = "AUTO" },
+		{ Name = "Party", Code = "PARTY" },
+		{ Name = "Raid", Code = "RAID" },
+		{ Name = "Say", Code = "SAY" },
+		{ Name = "Yell", Code = "YELL" },
+		{ Name = "Instance Chat", Code = "INSTANCE_CHAT" },
+	}
 	LOCCreateComboBox(settings_channel)
 
 	local settings_showtranslation = {}
