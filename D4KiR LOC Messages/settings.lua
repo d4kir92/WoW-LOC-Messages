@@ -1,5 +1,7 @@
 -- By D4KiR
 
+local L = LibStub("AceLocale-3.0"):GetLocale("D4KIRLOCMessagesHelper")
+
 function LOCInitSetting()
 	local LOCTAB_Settings = {}
 	LOCTAB_Settings.panel = CreateFrame("Frame", "LOCTAB_Settings", UIParent)
@@ -25,7 +27,7 @@ function LOCInitSetting()
 	settings_printnothing.name = "printnothing"
 	settings_printnothing.parent = LOCTAB_Settings.panel
 	settings_printnothing.checked = LOCGetConfig("printnothing", false)
-	settings_printnothing.text = "printnothing"
+	settings_printnothing.text = L["printnothing"]
 	settings_printnothing.x = 10
 	settings_printnothing.y = Y
 	settings_printnothing.dbvalue = "printnothing"
@@ -36,7 +38,7 @@ function LOCInitSetting()
 	settings_showinraids.name = "showinraids"
 	settings_showinraids.parent = LOCTAB_Settings.panel
 	settings_showinraids.checked = LOCGetConfig("showinraids", true)
-	settings_showinraids.text = "showinraids"
+	settings_showinraids.text = L["showinraids"]
 	settings_showinraids.x = 10
 	settings_showinraids.y = Y
 	settings_showinraids.dbvalue = "showinraids"
@@ -47,7 +49,7 @@ function LOCInitSetting()
 	settings_showinbgs.name = "showinbgs"
 	settings_showinbgs.parent = LOCTAB_Settings.panel
 	settings_showinbgs.checked = LOCGetConfig("showinbgs", false)
-	settings_showinbgs.text = "showinbgs"
+	settings_showinbgs.text = L["showinbgs"]
 	settings_showinbgs.x = 10
 	settings_showinbgs.y = Y
 	settings_showinbgs.dbvalue = "showinbgs"
@@ -59,7 +61,7 @@ function LOCInitSetting()
 	settings_showlocchat.name = "showlocchat"
 	settings_showlocchat.parent = LOCTAB_Settings.panel
 	settings_showlocchat.checked = LOCGetConfig("showlocchat", true)
-	settings_showlocchat.text = "showlocchat"
+	settings_showlocchat.text = L["showlocchat"]
 	settings_showlocchat.x = 10
 	settings_showlocchat.y = Y
 	settings_showlocchat.dbvalue = "showlocchat"
@@ -70,7 +72,7 @@ function LOCInitSetting()
 	settings_showlocemote.name = "showlocemote"
 	settings_showlocemote.parent = LOCTAB_Settings.panel
 	settings_showlocemote.checked = LOCGetConfig("showlocemote", true)
-	settings_showlocemote.text = "showlocemote"
+	settings_showlocemote.text = L["showlocemote"]
 	settings_showlocemote.x = 10
 	settings_showlocemote.y = Y
 	settings_showlocemote.dbvalue = "showlocemote"
@@ -111,7 +113,7 @@ function LOCInitSetting()
 	settings_prefix.name = "prefix"
 	settings_prefix.parent = LOCTAB_Settings.panel
 	settings_prefix.value = LOCGetConfig("prefix", "[LOC]")
-	settings_prefix.text = "prefix"
+	settings_prefix.text = L["prefix"]
 	settings_prefix.x = 10
 	settings_prefix.y = Y
 	settings_prefix.dbvalue = "prefix"
@@ -121,7 +123,7 @@ function LOCInitSetting()
 	settings_suffix.name = "suffix"
 	settings_suffix.parent = LOCTAB_Settings.panel
 	settings_suffix.value = LOCGetConfig("suffix", "")
-	settings_suffix.text = "suffix"
+	settings_suffix.text = L["suffix"]
 	settings_suffix.x = 10 + 250 + 10
 	settings_suffix.y = Y
 	settings_suffix.dbvalue = "suffix"

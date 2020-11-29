@@ -6,12 +6,7 @@ function LOCCreateText(tab)
 	local text = tab.frame:CreateFontString(nil, "ARTWORK")
 	text:SetFont(STANDARD_TEXT_FONT, tab.textsize, "OUTLINE")
 	text:SetPoint("TOPLEFT", tab.parent, "TOPLEFT", tab.x, tab.y)
-	text:SetText(LOCGT(tab.text, nil, true))
-
-	hooksecurefunc("UpdateLanguage", function()
-		text:SetText(LOCGT(tab.text, nil, true))
-	end)
-
+	text:SetText(tab.text)
 	return text
 end
 
@@ -138,7 +133,7 @@ function LOCCreateSlider(tab)
 		LOCTABPC[tab.dbvalue] = val
 		local trans = {}
 		trans["VALUE"] = val
-		SL.Text:SetText(LOCGT(tab.text, trans, true))
+		SL.Text:SetText(tab.text)
 		if tab.func ~= nil then
 			tab:func()
 		end
@@ -147,7 +142,7 @@ function LOCCreateSlider(tab)
 	hooksecurefunc("UpdateLanguage", function()
 		local trans = {}
 		trans["VALUE"] = SL:GetValue()
-		SL.Text:SetText(LOCGT(tab.text, trans, true))
+		SL.Text:SetText(tab.text)
 	end)
 
 	return EB

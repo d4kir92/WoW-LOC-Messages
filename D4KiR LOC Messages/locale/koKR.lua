@@ -1,14 +1,14 @@
 -- koKR Korean
+local L = LibStub("AceLocale-3.0"):NewLocale("D4KIRLOCMessagesHelper", "koKR")
+if not L then return end
 
-function LOCLang_koKR()
-	lang.showlocchat = "메즈 채팅 메세지"
-	lang.showlocemote = "메즈 이모티"
-	lang.loctext = "ART (X 초)"
+L["showlocchat"] = "메즈 채팅 메세지"
+L["showlocemote"] = "메즈 이모티"
+L["loctext"] = "ART (X 초)"
 
-	lang.prefix = "접두사"
-	lang.suffix = "접미사"
+L["prefix"] = "접두사"
+L["suffix"] = "접미사"
 
-	lang.printnothing = "출력 안함"
-	lang.showinraids = "레이드에서 보기"
-	lang.showinbgs = "전장에서 보기"
-end
+L["printnothing"] = "출력 안함"
+L["showinraids"] = "레이드에서 보기"
+L["showinbgs"] = "전장에서 보기"

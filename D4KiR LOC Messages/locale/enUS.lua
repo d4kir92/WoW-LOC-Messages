@@ -1,21 +1,13 @@
 -- enUS English
+local L = LibStub("AceLocale-3.0"):NewLocale("D4KIRLOCMessagesHelper", "enUS", true)
 
-elang = elang or {}
+L["showlocchat"] = "Loss of control Chat"
+L["showlocemote"] = "Loss of control Emote"
+L["loctext"] = "%s (For %i seconds)"
 
-function LOCLang_enUS()
-	lang.showlocchat = "Loss of control Chat-Nachricht"
-	lang.showlocemote = "Loss of control Emote"
-	lang.loctext = "ART (For X seconds)"
+L["prefix"] = "Prefix"
+L["suffix"] = "Suffix"
 
-	lang.prefix = "Prefix"
-	lang.suffix = "Suffix"
-
-	lang.printnothing = "Print Nothing"
-	lang.showinraids = "Show in Raids"
-	lang.showinbgs = "Show in Battlegrounds"
-
-	for i, v in pairs(lang) do
-		elang[i] = v
-	end
-end
-LOCLang_enUS()
+L["printnothing"] = "Print Nothing"
+L["showinraids"] = "Show in Raids"
+L["showinbgs"] = "Show in Battlegrounds"

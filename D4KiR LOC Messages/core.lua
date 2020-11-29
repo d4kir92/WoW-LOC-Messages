@@ -1,5 +1,7 @@
 -- By D4KiR
 
+local L = LibStub("AceLocale-3.0"):GetLocale("D4KIRLOCMessagesHelper")
+
 function LOCAllowedTo()
 	local _channel = LOCGetConfig("channelchat", "AUTO")
 	if (GetNumGroupMembers() > 0 or GetNumSubgroupMembers() > 0 or _channel == "SAY" or _channel == "YELL") and LOCGetConfig("printnothing", false) == false then
@@ -67,8 +69,6 @@ function LOCToCurrentChat(msg)
 	end
 end
 
-
-
 function SetupLOC()
 	if LOCSETUP then
 		if not InCombatLockdown() then
@@ -76,37 +76,6 @@ function SetupLOC()
 
 			LOCInitSetting()
 
-			LOCLang_enUS()
-			if GetLocale() == "enUS" then
-				--LOCmsg("Language detected: enUS (English)")
-				LOCLang_enUS()
-			elseif GetLocale() == "deDE" then
-				--LOCmsg("Language detected: deDE (Deutsch)")
-				LOCLang_deDE()
-			elseif GetLocale() == "esES" then
-				--LOCmsg("Language detected: esES (Spanish)")
-				LOCLang_esES()
-			elseif GetLocale() == "frFR" then
-				--LOCmsg("Language detected: frFR (French)")
-				LOCLang_frFR()
-			elseif GetLocale() == "koKR" then
-				--LOCmsg("Language detected: koKR (Korean)")
-				LOCLang_koKR()
-			elseif GetLocale() == "ruRU" then
-				--LOCmsg("Language detected: ruRU (Russian)")
-				LOCLang_ruRU()
-			elseif GetLocale() == "zhCN" then
-				--LOCmsg("Language detected: zhCN (Simplified Chinese)")
-				LOCLang_zhCN()
-			elseif GetLocale() == "zhTW" then
-				--LOCmsg("Language detected: zhTW (Traditional Chinese)")
-				LOCLang_zhTW()
-			else
-				LOCmsg("Language not found (" .. GetLocale() .. "), using English one!")
-				LOCmsg("If you want your language, please visit the cursegaming site of this project!")
-			end
-
-			UpdateLanguage()
 		else
 			C_Timer.After(0.1, function()	
 				SetupLOC()
@@ -114,8 +83,6 @@ function SetupLOC()
 		end
 	end
 end
-
-
 
 local dispellableDebuffTypes = { Magic = true, Curse = true, Disease = true, Poison = true};
 
@@ -154,10 +121,6 @@ f_loc:SetScript("OnEvent", function(self, event, id)
 		}
 
 		if tContains(LOCTypes, loctype) and duration ~= nil then
-			local trans = {}
-			trans["ART"] = text
-			trans["X"] = LOCMathR(duration, 1)
-
 			-- Safe LOCTYPE
 			if locs[text] ~= nil then
 				if locs[text] < GetTime() then
@@ -172,7 +135,7 @@ f_loc:SetScript("OnEvent", function(self, event, id)
 			if text and (not self.past[text] or GetTime() > self.past[text]) and LOCGetConfig(string.lower(loctype), false) and not LOCGetConfig("printnothing", false) and loctype ~= "NONE" then
 				self.past[text] = GetTime() + duration
 				if LOCGetConfig("showlocchat", true) and LOCAllowedTo() then
-					LOCToCurrentChat(LOCGT("loctext", trans))
+					LOCToCurrentChat(string.format(L["loctext"], text, LOCMathR(duration, 1)))
 				end
 				if LOCGetConfig("showlocemote", true) and LOCAllowedTo() then
 					DoEmote("helpme")
