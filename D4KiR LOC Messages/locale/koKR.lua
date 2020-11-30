@@ -4,7 +4,7 @@ if not L then return end
 
 L["showlocchat"] = "메즈 채팅 메세지"
 L["showlocemote"] = "메즈 이모티"
-L["loctext"] = "ART (X 초)"
+L["loctext"] = "%s (%i 초)"
 
 L["prefix"] = "접두사"
 L["suffix"] = "접미사"

@@ -4,7 +4,7 @@ if not L then return end
 
 L["showlocchat"] = "Perte de contrôle Message dans le Chat"
 L["showlocemote"] = "Perte de contrôle Emote"
-L["loctext"] = "ART (Soin dispo dans X secondes)"
+L["loctext"] = "%s (Soin dispo dans %i secondes)"
 
 L["prefix"] = "Préfixe"
 L["suffix"] = "Suffixe"
