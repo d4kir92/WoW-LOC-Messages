@@ -4,7 +4,7 @@ if not L then return end
 
 L["showlocchat"] = "被控制 聊天消息"
 L["showlocemote"] = "被控制 表情"
-L["loctext"] = "ART (X 秒)"
+L["loctext"] = "%s (%i 秒)"
 
 L["prefix"] = "前缀"
 L["suffix"] = "后缀"
