@@ -1,10 +1,10 @@
 -- esES Spain
+local L = LibStub("AceLocale-3.0"):NewLocale("D4KIRLOCMessagesHelper", "esES")
+if not L then return end
 
-function LOCLang_esES()
-	lang.showlocchat = "Perdida de control Mensaje de chat"
-	lang.showlocemote = "Perdida de control Emote"
-	lang.loctext = "ART (Durante X segundos)"
+L["showlocchat"] = "Perdida de control Mensaje de chat"
+L["showlocemote"] = "Perdida de control Emote"
+L["loctext"] = "ART (Durante X segundos)"
 
-	lang.prefix = "Prefijo"
-	lang.suffix = "Sufijo"
-end
+L["prefix"] = "Prefijo"
+L["suffix"] = "Sufijo"

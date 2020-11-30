@@ -1,14 +1,14 @@
 -- ruRU Russian
+local L = LibStub("AceLocale-3.0"):NewLocale("D4KIRLOCMessagesHelper", "ruRU")
+if not L then return end
 
-function LOCLang_ruRU()
-	lang.showlocchat = "Сообщение в чате, когда потерян контроль"
-	lang.showlocemote = "Потеря контроля/эмоция"
-	lang.loctext = "ART (на X секунд)"
+L["showlocchat"] = "Сообщение в чате, когда потерян контроль"
+L["showlocemote"] = "Потеря контроля/эмоция"
+L["loctext"] = "ART (на X секунд)"
 
-	lang.prefix = "Префикс"
-	lang.suffix = "Суффикс"
+L["prefix"] = "Префикс"
+L["suffix"] = "Суффикс"
 
-	lang.printnothing = "Ничего не печатать"
-	lang.showinraids = "Показать в рейде"
-	lang.showinbgs = "Показывать на поле битвы"
-end
+L["printnothing"] = "Ничего не печатать"
+L["showinraids"] = "Показать в рейде"
+L["showinbgs"] = "Показывать на поле битвы"

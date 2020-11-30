@@ -1,14 +1,14 @@
 -- deDE German Deutsch
+local L = LibStub("AceLocale-3.0"):NewLocale("D4KIRLOCMessagesHelper", "deDE")
+if not L then return end
 
-function LOCLang_deDE()
-	lang.showlocchat = "Kontrollverlust Chat-Nachricht"
-	lang.showlocemote = "Kontrollverlust Emote"
-	lang.loctext = "ART (Für X Sekunden)"
+L["showlocchat"] = "Kontrollverlust Chat-Nachricht"
+L["showlocemote"] = "Kontrollverlust Emote"
+L["loctext"] = "ART (Für X Sekunden)"
 
-	lang.prefix = "Präfix"
-	lang.suffix = "Suffix"
+L["prefix"] = "Präfix"
+L["suffix"] = "Suffix"
 
-	lang.printnothing = "Nichts Schreiben"
-	lang.showinraids = "In Schlachtzügen anzeigen"
-	lang.showinbgs = "In Schlachtfeldern anzeigen"
-end
+L["printnothing"] = "Nichts Schreiben"
+L["showinraids"] = "In Schlachtzügen anzeigen"
+L["showinbgs"] = "In Schlachtfeldern anzeigen"

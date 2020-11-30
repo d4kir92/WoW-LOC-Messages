@@ -1,14 +1,14 @@
 -- zhTW Traditional Chinese
+local L = LibStub("AceLocale-3.0"):NewLocale("D4KIRLOCMessagesHelper", "zhTW")
+if not L then return end
 
-function LOCLang_zhTW()
-	lang.showlocchat = "被控場聊天訊息"
-	lang.showlocemote = "被控場表情動作"
-	lang.loctext = "ART (X 秒)"
+L["showlocchat"] = "被控場聊天訊息"
+L["showlocemote"] = "被控場表情動作"
+L["loctext"] = "ART (X 秒)"
 
-	lang.prefix = "前置文字"
-	lang.suffix = "後置文字"
+L["prefix"] = "前置文字"
+L["suffix"] = "後置文字"
 
-	lang.printnothing = "不顯示任何東西"
-	lang.showinraids = "在團隊時顯示"
-	lang.showinbgs = "在戰場時顯示"
-end
+L["printnothing"] = "不顯示任何東西"
+L["showinraids"] = "在團隊時顯示"
+L["showinbgs"] = "在戰場時顯示"

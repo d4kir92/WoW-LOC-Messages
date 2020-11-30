@@ -1,6 +1,6 @@
 -- By D4KiR
 
-local retail = true
+local retail = false
 function IsRetail()
 	local isclassic = false
 	if MainMenuBarPerformanceBarFrame ~= nil then
