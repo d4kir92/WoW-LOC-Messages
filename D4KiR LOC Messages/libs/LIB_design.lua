@@ -90,27 +90,23 @@ function LOCCreateComboBox(tab)
 	tab.x = tab.x or 0
 	tab.y = tab.y or 0
 
-	local CB = L_Create_UIDropDownMenu("Frame", tab.parent)
+	local CB = L_Create_UIDropDownMenu(tab.name, tab.parent)
 	CB:SetPoint("TOPLEFT", tab.x, tab.y)
 
-	L_UIDropDownMenu_SetWidth(CB, 120)
-	L_UIDropDownMenu_SetText(CB, tab.value)
-
-	-- Create and bind the initialization function to the dropdown menu
 	L_UIDropDownMenu_Initialize(CB, function(self, level, menuList)
-		for i, v in pairs(tab.tab) do
+		for i, channel in pairs(tab.tab) do
 			local info = L_UIDropDownMenu_CreateInfo()
-			info.func = self.SetValue
-			info.text, info.arg1, info.checked = v, v, v == tab.value
-			L_UIDropDownMenu_AddButton(info)
+			info.text, info.value, info.arg1 = channel.Name, channel.Code, i
+			info.func = function(self, arg1, arg2, checked)
+				LOCTABPC[tab.dbvalue] = self.value
+				L_UIDropDownMenu_SetSelectedValue(CB, self.value);
+			end
+			L_UIDropDownMenu_AddButton(info, level)
 		end
 	end)
 
-	function CB:SetValue(newValue)
-		LOCTABPC[tab.dbvalue] = newValue
-		L_UIDropDownMenu_SetText(CB, newValue)
-		L_CloseDropDownMenus()
-	end
+	L_UIDropDownMenu_SetWidth(CB, 120)
+	L_UIDropDownMenu_SetSelectedValue(CB, tab.value);
 
 	return CB
 end
