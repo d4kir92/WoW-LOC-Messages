@@ -2,6 +2,11 @@
 
 local L = LibStub("AceLocale-3.0"):GetLocale("D4KIRLOCMessagesHelper")
 
+LOCBUILD = "CLASSIC"
+if select(4, GetBuildInfo()) > 19999 then
+	LOCBUILD = "RETAIL"
+end
+
 function LOCInitSetting()
 	local LOCTAB_Settings = {}
 	LOCTAB_Settings.panel = CreateFrame("Frame", "LOCTAB_Settings", UIParent)
