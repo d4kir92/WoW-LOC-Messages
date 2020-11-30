@@ -62,7 +62,6 @@ function LOCToCurrentChat(msg)
 		else
 			local mes = prefix .. msg .. suffix
 			if mes ~= nil then
-				--print(mes, _channel)
 				SendChatMessage(mes, _channel)
 			end
 		end

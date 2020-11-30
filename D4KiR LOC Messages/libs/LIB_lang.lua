@@ -7,8 +7,7 @@ function LOCGT(str, tab, force)
 	local strid = string.lower(str)
 	local result = lang[strid]
 	local eng = elang[strid]
-	--print(result)
-	--print(eng)
+
 	if result ~= nil and eng ~= nil then
 		if tab ~= nil then
 			for i, v in pairs(tab) do

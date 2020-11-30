@@ -197,14 +197,11 @@ frame:RegisterEvent("VARIABLES_LOADED")
 frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 function frame:OnEvent(event)
 	if event == "VARIABLES_LOADED" then
-		--print("VARIABLES_LOADED")
 		vars = true
 	end
 	if event == "ADDON_LOADED" then
-		--print("ADDON_LOADED")
 		addo = true
 	end
-	--print(vars, addo, LOCloaded)
 	if vars and addo and not LOCloaded then
 		LOCloaded = true
 		C_Timer.After(0, function()
