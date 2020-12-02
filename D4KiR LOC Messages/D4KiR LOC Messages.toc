@@ -1,5 +1,5 @@
 ## Interface: 90002
-## Version: 1.10 Release
+## Version: 1.11 Release
 ## Title: D4KiR |cffffffff• |cff9966ffLOC Messages
 ## Notes: Send to chat LOC messages
 ## Author: D4KiR
